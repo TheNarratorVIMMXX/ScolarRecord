@@ -26,7 +26,7 @@ El código queda disponible como referencia de aprendizaje en C++.
 ## 🎬 Vista Previa
 
 <div align="center">
-  <img src="assets/preview.gif" alt="Sistema de Registro Escolar Vista Previa"/>
+  <img src="assets/gifs/preview.gif" alt="Sistema de Registro Escolar Vista Previa"/>
 </div>
 
 ---
