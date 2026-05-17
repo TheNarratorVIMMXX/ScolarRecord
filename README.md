@@ -26,7 +26,7 @@ The code remains available as a C++ learning reference.
 ## 🎬 Preview
 
 <div align="center">
-  <img src="assets/preview.gif" alt="School Registration System Preview"/>
+  <img src="assets/gifs/preview.gif" alt="School Registration System Preview"/>
 </div>
 
 ---
