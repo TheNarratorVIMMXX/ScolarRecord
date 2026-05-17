@@ -1,0 +1,413 @@
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- DOCUMENTACIÓN -->
+<!-- Vista para el EduMath -->
+<!-- Ultima Modificación: 09/05/2026 -->
+<!-- Autor: Magallanes López Carlos Gabriel -->
+<!-- Correo: cgmagallanes23@gmail.com -->
+<!-- Versión: 1.0 -->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>ScolarRecord</title>
+        <link href="https://fonts.googleapis.com/css2?family=Consolas&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4b/Codeblocks_logo.png">
+    </head>
+    <body>
+
+        <!-- Barra de Título -->
+        <div class="titlebar">
+            
+            <!-- Puntos de Decoración -->
+            <div class="titlebar-dot dot-red"></div>
+            <div class="titlebar-dot dot-yellow"></div>
+            <div class="titlebar-dot dot-green"></div>
+            
+            <!-- Nombre de la Barra de Título -->
+            <span class="titlebar-name" data-i18n="titlebarName">Code::Blocks 20.03 — ScolarRecord</span>
+            
+            <!-- Menú de la Barra de Título -->
+            <div class="titlebar-menu">
+                <span>File</span><span>Edit</span><span>View</span>
+                <span>Build</span><span>Debug</span><span>Help</span>
+            </div>
+
+        </div>
+
+        <!-- Barra de Pestañas -->
+        <div class="tabbar">
+            <a href="#hero" class="tab active" data-i18n="tabHero">main.cpp</a>
+            <a href="#about" class="tab" data-i18n="tabAbout">README.md</a>
+            <a href="#structure" class="tab" data-i18n="tabStructure">structs.hpp</a>
+            <a href="#flow" class="tab" data-i18n="tabFlow">register.cpp</a>
+            <a href="#validation" class="tab" data-i18n="tabValidation">validators.cpp</a>
+            <a href="#concepts" class="tab" data-i18n="tabConcepts">concepts.txt</a>
+            <a href="#status" class="tab" data-i18n="tabStatus">STATUS</a>
+        </div>
+
+        <!-- Diseño del IDE -->
+        <div class="ide-layout">
+
+            <!-- Árbol de Archivos -->
+            <aside class="sidebar">
+                
+                <!-- Título del Árbol de Archivos -->
+                <div class="sidebar-title" data-i18n="sidebarTitle">Workspace</div>
+                
+                <!-- Carpeta Principal -->
+                <div class="tree-item folder">📁 ScolarRecord</div>
+                
+                <!-- Archivo Principal -->
+                <a href="#hero" class="tree-item"><span class="ext-main">◆</span> main.cpp</a>
+                
+                <!-- Carpeta Core -->
+                <div class="tree-item folder">📁 core</div>
+                <a href="#structure" class="tree-item"><span class="ext-hpp">◆</span> structs.hpp</a>
+                <a href="#flow" class="tree-item"><span class="ext-cpp">◆</span> register.cpp</a>
+                <a href="#structure" class="tree-item"><span class="ext-hpp">◆</span> register.hpp</a>
+                <a href="#structure" class="tree-item"><span class="ext-hpp">◆</span> operators.hpp</a>
+                
+                <!-- Carpeta UI -->
+                <div class="tree-item folder">📁 ui</div>
+                <a href="#about"      class="tree-item"><span class="ext-cpp">◆</span> design.cpp</a>
+                <a href="#about"      class="tree-item"><span class="ext-hpp">◆</span> design.hpp</a>
+                
+                <!-- Carpeta Utils -->
+                <div class="tree-item folder">📁 utils</div>
+                <a href="#validation" class="tree-item"><span class="ext-cpp">◆</span> validators.cpp</a>
+                <a href="#validation" class="tree-item"><span class="ext-hpp">◆</span> validators.hpp</a>
+                <a href="#concepts"   class="tree-item"><span class="ext-cpp">◆</span> helpers.cpp</a>
+                <a href="#concepts"   class="tree-item"><span class="ext-hpp">◆</span> helpers.hpp</a>
+                <a href="#concepts"   class="tree-item"><span class="ext-hpp">◆</span> constants.hpp</a>
+            </aside>
+
+            <!-- Editor Area -->
+            <main class="editor-area">
+
+                <!-- Hero Section -->
+                <section id="hero">
+
+                    <!-- Números de Línea -->
+                    <div class="line-numbers" id="ln-hero"></div>
+                    
+                    <!-- Contenido de la Sección Hero -->
+                    <div class="section-content">
+                        <div class="section-label fade-in" data-i18n="heroLabel">main.cpp — entry point</div>
+                        
+                        <!-- Estado del Proyecto -->
+                        <div class="hero-badge fade-in delay-1" data-i18n="heroBadge">⚠ PROYECTO ABANDONADO — v1.0</div>
+                        <h1 class="fade-in delay-2"><span class="kw">Scolar</span><span class="str">Record</span></h1>
+                        
+                        <!-- Descripción del Proyecto -->
+                        <p class="hero-desc fade-in delay-3" data-i18n="heroDesc">
+                            Sistema de registro escolar por consola desarrollado en C++23.
+                            Valida, captura y almacena datos de alumnos con generación automática
+                            de IDs únicos y una interfaz visual con arte ASCII.
+                        </p>
+                        
+                        <!-- Metadatos del Proyecto -->
+                        <div class="hero-meta fade-in delay-4">
+                            <div class="meta-item">Lenguaje: <span data-i18n="metaLang">C++23</span></div>
+                            <div class="meta-item">IDE Original: <span data-i18n="metaIDE">Code::Blocks</span></div>
+                            <div class="meta-item">Plataforma: <span data-i18n="metaPlatform">Multiplataforma</span></div>
+                            <div class="meta-item">Autor: <span data-i18n="metaAuthor">Carlos Gabriel Magallanes</span></div>
+                        </div>
+                    
+                    </div>
+                </section>
+
+                <!--Acerca de -->
+                <section id="about">
+                    <div class="line-numbers" id="ln-about"></div>
+                    
+                    <!-- Contenido de la Sección Acerca de -->
+                    <div class="section-content">
+                        <div class="section-label fade-in" data-i18n="aboutLabel">README.md — descripción</div>
+                        
+                        <!-- Subtítulo -->
+                        <h2 class="fade-in delay-1" data-i18n="aboutH2">Proyecto</h2>
+                        
+                        <!-- Descripción del Proyecto -->
+                        <p class="fade-in delay-2" data-i18n="aboutP1">
+                            ScolarRecord es una aplicación de terminal que simula el registro de alumnos
+                            de una institución educativa. Cada alumno requiere nombre completo, fecha y lugar
+                            de nacimiento, sexo, grado, grupo y promedio final.
+                        </p>
+
+                        <!-- Descripción Adicional -->
+                        <p class="fade-in delay-3" data-i18n="aboutP2">
+                            El sistema valida cada campo de forma independiente en múltiples capas,
+                            mostrando el contexto de datos ya ingresados solo cuando ocurre un error.
+                            Al finalizar, genera automáticamente un ID único de 8 dígitos por alumno.
+                        </p>
+
+                        <!-- Cuadrícula de Características -->
+                        <div class="feature-grid fade-in delay-4">
+                            
+                            <!-- Validación Robusta -->
+                            <div class="feature-card">
+                                <span class="card-icon">🔒</span>
+                                <h3 data-i18n="feat1Title">Validación Robusta</h3>
+                                <p data-i18n="feat1Desc">Verificación en múltiples capas por campo, con manejo de excepciones.</p>
+                            </div>
+
+                            <!-- IDs Únicos -->
+                            <div class="feature-card">
+                                <span class="card-icon">🆔</span>
+                                <h3 data-i18n="feat2Title">IDs Únicos</h3>
+                                <p data-i18n="feat2Desc">Generación aleatoria con std::random_device garantizando unicidad.</p>
+                            </div>
+
+                            <!-- Arte ASCII -->
+                            <div class="feature-card">
+                                <span class="card-icon">🖥️</span>
+                                <h3 data-i18n="feat3Title">Arte ASCII</h3>
+                                <p data-i18n="feat3Desc">Banners y menús visuales construidos completamente en consola.</p>
+                            </div>
+                            
+                            <!-- Multiplataforma -->
+                            <div class="feature-card">
+                                <span class="card-icon">🌐</span>
+                                <h3 data-i18n="feat4Title">Multiplataforma</h3>
+                                <p data-i18n="feat4Desc">Compatible con Windows, Linux y macOS via compilación condicional.</p>
+                            </div>
+                        
+                        </div>
+                    
+                    </div>
+                </section>
+
+                <!-- Estructura del Proyecto -->
+                <section id="structure">
+                    <div class="line-numbers" id="ln-structure"></div>
+                    
+                    <!-- Contenido de la Sección Estructura del Proyecto -->
+                    <div class="section-content">
+                        
+                        <!-- Estructuras -->
+                        <div class="section-label fade-in" data-i18n="structureLabel">structs.hpp — estructuras de datos</div>
+                        <h2 class="fade-in delay-1" data-i18n="structureH2">Estructuras</h2>
+                        <p class="fade-in delay-2" data-i18n="structureP">
+                            El proyecto está organizado en namespaces y structs que separan responsabilidades.
+                            Cada struct valida sus propios datos en el constructor.
+                        </p>
+
+                        <!-- Árbol de Archivos -->
+                        <div class="file-tree fade-in delay-3">
+                            <div><span class="dir">ScolarRecord/</span></div>
+                            <div>&nbsp;&nbsp;<span class="fm">main.cpp</span></div>
+                            <div>&nbsp;&nbsp;<span class="dir">core/</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fh">structs.hpp</span> &nbsp;<span style="color:var(--cb-comment)">// CompleteName, BirthDate, Place, Student</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fc">register.cpp</span> &nbsp;<span style="color:var(--cb-comment)">// namespace StudentRegister</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fh">operators.hpp</span> &nbsp;<span style="color:var(--cb-comment)">// sobrecarga operator&lt;&lt;</span></div>
+                            <div>&nbsp;&nbsp;<span class="dir">ui/</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fc">design.cpp</span> &nbsp;<span style="color:var(--cb-comment)">// namespace Design</span></div>
+                            <div>&nbsp;&nbsp;<span class="dir">utils/</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fc">validators.cpp</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fc">helpers.cpp</span></div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fh">constants.hpp</span></div>
+                        </div>
+
+                        <!-- Estructura Nombre Completo -->
+                        <div style="margin-top:28px">
+                            <div class="code-block fade-in delay-4">
+                                <span class="cb-label">structs.hpp</span>
+                                <span class="pp">#pragma once</span><br>
+                                <span class="kw">struct</span> <span class="ty">CompleteName</span> {<br>
+                                &nbsp;&nbsp;<span class="kw">const</span> <span class="ty">std::string</span> NAME;<br>
+                                &nbsp;&nbsp;<span class="kw">const</span> <span class="ty">std::string</span> PATERNAL_SURNAME;<br>
+                                &nbsp;&nbsp;<span class="kw">const</span> <span class="ty">std::string</span> MATERNAL_SURNAME;<br>
+                                };<br><br>
+                                <span class="kw">struct</span> <span class="ty">BirthDate</span> {<br>
+                                &nbsp;&nbsp;<span class="kw">const int</span> DAY, MONTH, YEAR;<br>
+                                &nbsp;&nbsp;<span class="cm">// Valida con std::chrono::year_month_day</span><br>
+                                };<br><br>
+                                <span class="kw">struct</span> <span class="ty">Student</span> {<br>
+                                &nbsp;&nbsp;<span class="kw">const</span> <span class="ty">CompleteName</span> COMPLETE_NAME;<br>
+                                &nbsp;&nbsp;<span class="kw">const</span> <span class="ty">BirthDate</span> BIRTHDATE;<br>
+                                &nbsp;&nbsp;<span class="kw">const</span> <span class="ty">Place</span> BIRTHPLACE;<br>
+                                &nbsp;&nbsp;<span class="ty">int</span> id_student; <span class="cm">// generado automáticamente</span><br>
+                                &nbsp;&nbsp;<span class="kw">static</span> <span class="ty">std::set</span>&lt;<span class="ty">int</span>&gt; ids_usados;<br>
+                                };
+                            </div>
+                        </div>
+                    
+                    </div>
+                
+                </section>
+
+                <!-- Flujo del Programa -->
+                <section id="flow">
+                    <div class="line-numbers" id="ln-flow"></div>
+                    
+                    <!-- Contenido de la Sección Flujo del Programa -->
+                    <div class="section-content">
+                        
+                        <!-- Encabezado y Descripción -->
+                        <div class="section-label fade-in" data-i18n="flowLabel">register.cpp — flujo de captura</div>
+                        <h2 class="fade-in delay-1" data-i18n="flowH2">Flujo del Programa</h2>
+                        <p class="fade-in delay-2" data-i18n="flowP">
+                            Cada campo se captura en su propio bucle de validación. Si hay error,
+                            se muestra el contexto de los datos ya ingresados. Si la construcción
+                            del struct falla, se reinician todos sus campos.
+                        </p>
+                        
+                        <!-- Flujo del Programa -->
+                        <div class="flow fade-in delay-3">
+                            <div class="flow-item"><span class="flow-num">1</span> <span data-i18n="flow1">Ingresa cantidad de alumnos</span></div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item"><span class="flow-num">2</span> <span class="kw" data-i18n="flow2">Nombre</span> → Apellido Paterno → Apellido Materno</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item"><span class="flow-num">3</span> <span class="ty" data-i18n="flow3">Día</span> → Mes → Año de Nacimiento</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item"><span class="flow-num">4</span> <span class="str" data-i18n="flow4">Ciudad</span> → Estado → País</div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item"><span class="flow-num">5</span> <span data-i18n="flow5">Sexo → Grado → Grupo → Promedio</span></div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item"><span class="flow-num">6</span> <span class="num" data-i18n="flow6">Generación automática de ID</span></div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-item"><span class="flow-num">7</span> <span data-i18n="flow7">Pantalla de confirmación → Guardar</span></div>
+                        </div>
+                    
+                    </div>
+                </section>
+
+                <!-- Validaciones -->
+                <section id="validation">
+                    <div class="line-numbers" id="ln-validation"></div>
+                    
+                    <!-- Encabezado-->
+                    <div class="section-content">
+                        <div class="section-label fade-in" data-i18n="validationLabel">validators.cpp — reglas de validación</div>
+                        <h2 class="fade-in delay-1" data-i18n="validationH2">Validaciones</h2>
+                        
+                        <!-- Tabla de validaciones -->
+                        <table class="val-table fade-in delay-2">
+                            <thead>
+                            <tr><th data-i18n="thField">Campo</th><th data-i18n="thRule">Regla</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td data-i18n="val1Field">Nombre / Apellidos</td><td data-i18n="val1Rule">Solo letras y espacios, no vacío</td></tr>
+                            <tr><td data-i18n="val2Field">Día</td><td data-i18n="val2Rule">Solo dígitos, máx 2 chars, rango 1–31</td></tr>
+                            <tr><td data-i18n="val3Field">Mes</td><td data-i18n="val3Rule">Solo dígitos, máx 2 chars, rango 1–12</td></tr>
+                            <tr><td data-i18n="val4Field">Año</td><td data-i18n="val4Rule">Solo dígitos, máx 4 chars, desde 1930</td></tr>
+                            <tr><td data-i18n="val5Field">Fecha completa</td><td data-i18n="val5Rule">Validada con std::chrono, no puede ser futura</td></tr>
+                            <tr><td data-i18n="val6Field">Ciudad / Estado / País</td><td data-i18n="val6Rule">Solo letras y espacios, no vacío</td></tr>
+                            <tr><td data-i18n="val7Field">Sexo</td><td data-i18n="val7Rule">Un carácter: M o F</td></tr>
+                            <tr><td data-i18n="val8Field">Grado</td><td data-i18n="val8Rule">Entero entre 1 y 8</td></tr>
+                            <tr><td data-i18n="val9Field">Grupo</td><td data-i18n="val9Rule">Una sola letra A–Z</td></tr>
+                            <tr><td data-i18n="val10Field">Promedio</td><td data-i18n="val10Rule">Decimal entre 0.0 y 10.0</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                
+                </section>
+
+                <!-- Conceptos Aprendidos -->
+                <section id="concepts">
+                    <div class="line-numbers" id="ln-concepts"></div>
+                    
+                    <!-- Contenido de la Sección Conceptos Aprendidos -->
+                    <div class="section-content">
+                        
+                        <!-- Encabezado -->
+                        <div class="section-label fade-in" data-i18n="conceptsLabel">concepts.txt — compilación y conceptos</div>
+                        <h2 class="fade-in delay-1" data-i18n="conceptsH2">Compilación</h2>
+                        
+                        <!-- Código de compilación -->
+                        <div class="code-block fade-in delay-2">
+                            <span class="cb-label">bash</span>
+                            <span class="cm"># Compilar</span><br>
+                            g++ <span class="kw">-std=c++23</span> -o ScolarRecord \<br>
+                            &nbsp;&nbsp;main.cpp \<br>
+                            &nbsp;&nbsp;core/register.cpp \<br>
+                            &nbsp;&nbsp;ui/design.cpp \<br>
+                            &nbsp;&nbsp;utils/helpers.cpp \<br>
+                            &nbsp;&nbsp;utils/validators.cpp<br><br>
+                            <span class="cm"># Ejecutar</span><br>
+                            <span class="str">./ScolarRecord</span>
+                        </div>
+
+                        <!-- Conceptos Demostrados -->
+                        <h2 class="fade-in delay-3" style="margin-top:32px" data-i18n="conceptsH2b">Conceptos Demostrados</h2>
+                        <div class="pills fade-in delay-4">
+                            <span class="pill green">structs</span>
+                            <span class="pill blue">namespaces</span>
+                            <span class="pill orange">try / catch</span>
+                            <span class="pill purple">operator&lt;&lt; sobrecargado</span>
+                            <span class="pill yellow">std::chrono</span>
+                            <span class="pill green">std::vector / std::set</span>
+                            <span class="pill blue">enum class</span>
+                            <span class="pill orange">random_device</span>
+                            <span class="pill purple">Compilación condicional</span>
+                            <span class="pill green">Separación de responsabilidades</span>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Estado del Proyecto -->
+                <section id="status">
+                    <div class="line-numbers" id="ln-status"></div>
+                    
+                    <!-- Contenido de la Sección Estado del Proyecto -->
+                    <div class="section-content">
+                        
+                        <!-- Encabezado -->
+                        <div class="section-label fade-in" data-i18n="statusLabel">STATUS — estado del proyecto</div>
+                        <h2 class="fade-in delay-1" data-i18n="statusH2">Estado: Abandonado</h2>
+                        
+                        <!-- Banner de estado -->
+                        <div class="status-banner fade-in delay-2">
+                            <div class="banner-title" data-i18n="bannerTitle">⚠ PROYECTO INCOMPLETO Y ABANDONADO</div>
+                            <p data-i18n="bannerP">
+                            Este proyecto fue desarrollado como ejercicio de aprendizaje. Durante el desarrollo
+                            se adquirió conocimiento sobre bases de datos relacionales, lo que hace que almacenar
+                            registros en memoria a través de una interfaz de consola sea poco práctico para un sistema real.
+                            Una solución con SQL o SQLite resolvería de forma más adecuada los problemas
+                            de persistencia, búsqueda y escalabilidad que este proyecto intentaba abordar manualmente.
+                            </p>
+                        </div>
+                        <p class="fade-in delay-3" data-i18n="statusP">El código queda disponible como referencia de aprendizaje en C++23.</p>
+                        
+                        <!-- Pendiente (no se implementará) -->
+                        <h2 class="fade-in delay-4" style="margin-top:28px" data-i18n="statusH2b">Pendiente (no se implementará)</h2>
+                        <div class="pills fade-in delay-5">
+                            <span class="pill" data-i18n="pend1">Pantalla de instrucciones</span>
+                            <span class="pill" data-i18n="pend2">Guardar en archivo (.csv)</span>
+                            <span class="pill" data-i18n="pend3">Búsqueda y edición</span>
+                            <span class="pill" data-i18n="pend4">Menú de navegación</span>
+                            <span class="pill" data-i18n="pend5">Exportación de reportes</span>
+                        </div>
+                    
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer>
+                    <span>Magallanes López Carlos Gabriel — <a href="mailto:cgmagallanes23@gmail.com">cgmagallanes23@gmail.com</a></span>
+                    <span data-i18n="footerRight">ScolarRecord v1.0 · C++23 · Code::Blocks</span>
+                </footer>
+                
+                <!-- Barra de Estado -->
+                <div class="statusbar">
+                    <span>C++ · UTF-8 · LF</span>
+                    <span>C++23</span>
+                    <span>Build: Release</span>
+                    <span>0 errors · 0 warnings</span>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Script -->
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
+
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
