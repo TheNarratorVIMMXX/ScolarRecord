@@ -200,6 +200,12 @@ ids_usados.insert(nuevo_id);
 
 ---
 
+## 📦 Descarga
+
+La última versión estable está disponible en la página de [Releases](../../releases).
+
+---
+
 ## 🔧 Compilación y Ejecución
 
 ### Requisitos
