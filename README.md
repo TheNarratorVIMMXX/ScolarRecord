@@ -200,6 +200,12 @@ used_ids.insert(new_id);
 
 ---
 
+## 📦 Download
+
+The latest stable version is available on the [Releases](../../releases) page.
+
+---
+
 ## 🔧 Compilation & Execution
 
 ### Requirements
